@@ -1,0 +1,17 @@
+C:\Users\Ali\source\repos\SampleApplication\src\02.Infra\Data\SampleApplication.Infra.Data\bin\Debug\net6.0\SampleApplication.Infra.Data.SQL.deps.json
+C:\Users\Ali\source\repos\SampleApplication\src\02.Infra\Data\SampleApplication.Infra.Data\bin\Debug\net6.0\SampleApplication.Infra.Data.SQL.dll
+C:\Users\Ali\source\repos\SampleApplication\src\02.Infra\Data\SampleApplication.Infra.Data\bin\Debug\net6.0\SampleApplication.Infra.Data.SQL.pdb
+C:\Users\Ali\source\repos\SampleApplication\src\02.Infra\Data\SampleApplication.Infra.Data\bin\Debug\net6.0\SampleApplication.Core.ApplicationService.dll
+C:\Users\Ali\source\repos\SampleApplication\src\02.Infra\Data\SampleApplication.Infra.Data\bin\Debug\net6.0\SampleApplication.Core.Domain.dll
+C:\Users\Ali\source\repos\SampleApplication\src\02.Infra\Data\SampleApplication.Infra.Data\bin\Debug\net6.0\SampleApplication.Core.ApplicationService.pdb
+C:\Users\Ali\source\repos\SampleApplication\src\02.Infra\Data\SampleApplication.Infra.Data\bin\Debug\net6.0\SampleApplication.Core.Domain.pdb
+C:\Users\Ali\source\repos\SampleApplication\src\02.Infra\Data\SampleApplication.Infra.Data\obj\Debug\net6.0\SampleApplication.Infra.Data.SQL.csproj.AssemblyReference.cache
+C:\Users\Ali\source\repos\SampleApplication\src\02.Infra\Data\SampleApplication.Infra.Data\obj\Debug\net6.0\SampleApplication.Infra.Data.SQL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ali\source\repos\SampleApplication\src\02.Infra\Data\SampleApplication.Infra.Data\obj\Debug\net6.0\SampleApplication.Infra.Data.SQL.AssemblyInfoInputs.cache
+C:\Users\Ali\source\repos\SampleApplication\src\02.Infra\Data\SampleApplication.Infra.Data\obj\Debug\net6.0\SampleApplication.Infra.Data.SQL.AssemblyInfo.cs
+C:\Users\Ali\source\repos\SampleApplication\src\02.Infra\Data\SampleApplication.Infra.Data\obj\Debug\net6.0\SampleApplication.Infra.Data.SQL.csproj.CoreCompileInputs.cache
+C:\Users\Ali\source\repos\SampleApplication\src\02.Infra\Data\SampleApplication.Infra.Data\obj\Debug\net6.0\SampleApplication.Infra.Data.SQL.csproj.CopyComplete
+C:\Users\Ali\source\repos\SampleApplication\src\02.Infra\Data\SampleApplication.Infra.Data\obj\Debug\net6.0\SampleApplication.Infra.Data.SQL.dll
+C:\Users\Ali\source\repos\SampleApplication\src\02.Infra\Data\SampleApplication.Infra.Data\obj\Debug\net6.0\refint\SampleApplication.Infra.Data.SQL.dll
+C:\Users\Ali\source\repos\SampleApplication\src\02.Infra\Data\SampleApplication.Infra.Data\obj\Debug\net6.0\SampleApplication.Infra.Data.SQL.pdb
+C:\Users\Ali\source\repos\SampleApplication\src\02.Infra\Data\SampleApplication.Infra.Data\obj\Debug\net6.0\ref\SampleApplication.Infra.Data.SQL.dll
