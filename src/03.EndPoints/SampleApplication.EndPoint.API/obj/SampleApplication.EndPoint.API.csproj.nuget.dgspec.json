@@ -1,0 +1,276 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Ali\\source\\repos\\SampleApplication\\src\\03.EndPoints\\SampleApplication.EndPoint.API\\SampleApplication.EndPoint.API.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Ali\\source\\repos\\SampleApplication\\src\\01.Core\\SampleApplication.Core.ApplicationService\\SampleApplication.Core.ApplicationService.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Ali\\source\\repos\\SampleApplication\\src\\01.Core\\SampleApplication.Core.ApplicationService\\SampleApplication.Core.ApplicationService.csproj",
+        "projectName": "SampleApplication.Core.ApplicationService",
+        "projectPath": "C:\\Users\\Ali\\source\\repos\\SampleApplication\\src\\01.Core\\SampleApplication.Core.ApplicationService\\SampleApplication.Core.ApplicationService.csproj",
+        "packagesPath": "C:\\Users\\Ali\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ali\\source\\repos\\SampleApplication\\src\\01.Core\\SampleApplication.Core.ApplicationService\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Ali\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\Ali\\source\\repos\\SampleApplication\\src\\01.Core\\SampleApplication.Core.Domain\\SampleApplication.Core.Domain.csproj": {
+                "projectPath": "C:\\Users\\Ali\\source\\repos\\SampleApplication\\src\\01.Core\\SampleApplication.Core.Domain\\SampleApplication.Core.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Ali\\source\\repos\\SampleApplication\\src\\01.Core\\SampleApplication.Core.Domain\\SampleApplication.Core.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Ali\\source\\repos\\SampleApplication\\src\\01.Core\\SampleApplication.Core.Domain\\SampleApplication.Core.Domain.csproj",
+        "projectName": "SampleApplication.Core.Domain",
+        "projectPath": "C:\\Users\\Ali\\source\\repos\\SampleApplication\\src\\01.Core\\SampleApplication.Core.Domain\\SampleApplication.Core.Domain.csproj",
+        "packagesPath": "C:\\Users\\Ali\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ali\\source\\repos\\SampleApplication\\src\\01.Core\\SampleApplication.Core.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Ali\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Ali\\source\\repos\\SampleApplication\\src\\02.Infra\\Data\\SampleApplication.Infra.Data\\SampleApplication.Infra.Data.SQL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Ali\\source\\repos\\SampleApplication\\src\\02.Infra\\Data\\SampleApplication.Infra.Data\\SampleApplication.Infra.Data.SQL.csproj",
+        "projectName": "SampleApplication.Infra.Data.SQL",
+        "projectPath": "C:\\Users\\Ali\\source\\repos\\SampleApplication\\src\\02.Infra\\Data\\SampleApplication.Infra.Data\\SampleApplication.Infra.Data.SQL.csproj",
+        "packagesPath": "C:\\Users\\Ali\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ali\\source\\repos\\SampleApplication\\src\\02.Infra\\Data\\SampleApplication.Infra.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Ali\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\Ali\\source\\repos\\SampleApplication\\src\\01.Core\\SampleApplication.Core.ApplicationService\\SampleApplication.Core.ApplicationService.csproj": {
+                "projectPath": "C:\\Users\\Ali\\source\\repos\\SampleApplication\\src\\01.Core\\SampleApplication.Core.ApplicationService\\SampleApplication.Core.ApplicationService.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.36, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Ali\\source\\repos\\SampleApplication\\src\\03.EndPoints\\SampleApplication.EndPoint.API\\SampleApplication.EndPoint.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Ali\\source\\repos\\SampleApplication\\src\\03.EndPoints\\SampleApplication.EndPoint.API\\SampleApplication.EndPoint.API.csproj",
+        "projectName": "SampleApplication.EndPoint.API",
+        "projectPath": "C:\\Users\\Ali\\source\\repos\\SampleApplication\\src\\03.EndPoints\\SampleApplication.EndPoint.API\\SampleApplication.EndPoint.API.csproj",
+        "packagesPath": "C:\\Users\\Ali\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ali\\source\\repos\\SampleApplication\\src\\03.EndPoints\\SampleApplication.EndPoint.API\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Ali\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\Ali\\source\\repos\\SampleApplication\\src\\01.Core\\SampleApplication.Core.ApplicationService\\SampleApplication.Core.ApplicationService.csproj": {
+                "projectPath": "C:\\Users\\Ali\\source\\repos\\SampleApplication\\src\\01.Core\\SampleApplication.Core.ApplicationService\\SampleApplication.Core.ApplicationService.csproj"
+              },
+              "C:\\Users\\Ali\\source\\repos\\SampleApplication\\src\\02.Infra\\Data\\SampleApplication.Infra.Data\\SampleApplication.Infra.Data.SQL.csproj": {
+                "projectPath": "C:\\Users\\Ali\\source\\repos\\SampleApplication\\src\\02.Infra\\Data\\SampleApplication.Infra.Data\\SampleApplication.Infra.Data.SQL.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.36, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

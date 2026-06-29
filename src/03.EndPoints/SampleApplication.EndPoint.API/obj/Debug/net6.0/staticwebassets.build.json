@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "tkS3W+7+PSO6H31iiTCpesaY9r9DA9RApwp4oya9LNk=",
+  "Source": "SampleApplication.EndPoint.API",
+  "BasePath": "_content/SampleApplication.EndPoint.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

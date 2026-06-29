@@ -8,7 +8,7 @@ namespace SampleApplication.Infra.Data
         public DbSet<Person> People { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("server = . ; initial category = MicroService ; User Id = sa ; Password = 123");
+            optionsBuilder.UseSqlServer("server=. ; initial catalog = MicroService ; Trusted_connection = true");
         }
     }
 }
