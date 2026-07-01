@@ -14,6 +14,7 @@
             {
                 throw new ArgumentNullException("Invalid input for phoneNumber");
             }
+            Number = phoneNumber;
         }
     }
 }
