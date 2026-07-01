@@ -2,9 +2,9 @@
 {
     public class Person
     {
-        public int Id { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
+        public int Id { get; private set; }
+        public string FirstName { get; private set; }
+        public string LastName { get; private set; }
 
         public List<PhoneNumber> PhoneNumbers { get; set; } = new();
         private Person()
@@ -34,6 +34,18 @@
             if (PhoneNumbers.Any(x => x.Number == phoneNumber.Number))
                 throw new InvalidDataException("PhoneNumber is duplicate");
             PhoneNumbers.Add(phoneNumber);
+        }
+        public override bool Equals(object? obj)
+        {
+            var other = obj as Person;
+            if(other == null)
+                return false;
+
+            return other.Id == this.Id;
+        }
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
         }
     }
 }
