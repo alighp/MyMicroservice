@@ -5,7 +5,7 @@ public abstract class Entity<TId> : IEquatable<Entity<TId>>
     public TId Id { get; protected set; }
 
     private readonly List<IDomainEvent> _events = new List<IDomainEvent>();
-
+    public IReadOnlyList<IDomainEvent> Events => _events;
 
     public void AddEvent(IDomainEvent @event) 
     {

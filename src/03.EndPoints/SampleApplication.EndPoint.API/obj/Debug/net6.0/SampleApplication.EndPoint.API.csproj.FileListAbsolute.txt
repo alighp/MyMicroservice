@@ -5,9 +5,11 @@ C:\Users\Ali\source\repos\SampleApplication\src\03.EndPoints\SampleApplication.E
 C:\Users\Ali\source\repos\SampleApplication\src\03.EndPoints\SampleApplication.EndPoint.API\bin\Debug\net6.0\SampleApplication.EndPoint.API.runtimeconfig.json
 C:\Users\Ali\source\repos\SampleApplication\src\03.EndPoints\SampleApplication.EndPoint.API\bin\Debug\net6.0\SampleApplication.EndPoint.API.dll
 C:\Users\Ali\source\repos\SampleApplication\src\03.EndPoints\SampleApplication.EndPoint.API\bin\Debug\net6.0\SampleApplication.EndPoint.API.pdb
+C:\Users\Ali\source\repos\SampleApplication\src\03.EndPoints\SampleApplication.EndPoint.API\bin\Debug\net6.0\Humanizer.dll
 C:\Users\Ali\source\repos\SampleApplication\src\03.EndPoints\SampleApplication.EndPoint.API\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
 C:\Users\Ali\source\repos\SampleApplication\src\03.EndPoints\SampleApplication.EndPoint.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
 C:\Users\Ali\source\repos\SampleApplication\src\03.EndPoints\SampleApplication.EndPoint.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Ali\source\repos\SampleApplication\src\03.EndPoints\SampleApplication.EndPoint.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\Ali\source\repos\SampleApplication\src\03.EndPoints\SampleApplication.EndPoint.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\Ali\source\repos\SampleApplication\src\03.EndPoints\SampleApplication.EndPoint.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
 C:\Users\Ali\source\repos\SampleApplication\src\03.EndPoints\SampleApplication.EndPoint.API\bin\Debug\net6.0\Microsoft.Extensions.Caching.Abstractions.dll
@@ -75,5 +77,3 @@ C:\Users\Ali\source\repos\SampleApplication\src\03.EndPoints\SampleApplication.E
 C:\Users\Ali\source\repos\SampleApplication\src\03.EndPoints\SampleApplication.EndPoint.API\obj\Debug\net6.0\SampleApplication.EndPoint.API.pdb
 C:\Users\Ali\source\repos\SampleApplication\src\03.EndPoints\SampleApplication.EndPoint.API\obj\Debug\net6.0\SampleApplication.EndPoint.API.genruntimeconfig.cache
 C:\Users\Ali\source\repos\SampleApplication\src\03.EndPoints\SampleApplication.EndPoint.API\obj\Debug\net6.0\ref\SampleApplication.EndPoint.API.dll
-C:\Users\Ali\source\repos\SampleApplication\src\03.EndPoints\SampleApplication.EndPoint.API\bin\Debug\net6.0\Humanizer.dll
-C:\Users\Ali\source\repos\SampleApplication\src\03.EndPoints\SampleApplication.EndPoint.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll

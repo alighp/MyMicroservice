@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "mlPnA8rqgcxXt3YQLxpXBTjVavBG2B6H9cMa9opaSNXJivSJbgwdsQLckkXGiyni6oGCJln/Hxs2/Hhs8cMS7Q==",
+  "dgSpecHash": "kfzdMFv3h528yDyk7537Y1rP+PuFzaWuD5/IfYIA3dWgxhxlubDfCiVG8a+LB/WrMRmue3ivNG4T+0aCDlujfQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Ali\\source\\repos\\SampleApplication\\src\\02.Infra\\Data\\SampleApplication.Infra.Data\\SampleApplication.Infra.Data.SQL.csproj",
   "expectedPackageFiles": [

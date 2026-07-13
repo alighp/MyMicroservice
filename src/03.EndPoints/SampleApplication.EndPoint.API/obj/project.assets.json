@@ -2143,8 +2143,8 @@
     },
     "SampleApplication.Framework/1.0.0": {
       "type": "project",
-      "path": "../../../SampleApplication.Framework/SampleApplication.Framework.csproj",
-      "msbuildProject": "../../../SampleApplication.Framework/SampleApplication.Framework.csproj"
+      "path": "../../00.Framework/SampleApplication.Framework/SampleApplication.Framework.csproj",
+      "msbuildProject": "../../00.Framework/SampleApplication.Framework/SampleApplication.Framework.csproj"
     },
     "SampleApplication.Infra.Data.SQL/1.0.0": {
       "type": "project",
