@@ -5,11 +5,24 @@
       "SampleApplication.Core.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "SampleApplication.Framework": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/SampleApplication.Core.Domain.dll": {}
         },
         "runtime": {
           "bin/placeholder/SampleApplication.Core.Domain.dll": {}
+        }
+      },
+      "SampleApplication.Framework/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/SampleApplication.Framework.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SampleApplication.Framework.dll": {}
         }
       }
     }
@@ -19,6 +32,11 @@
       "type": "project",
       "path": "../SampleApplication.Core.Domain/SampleApplication.Core.Domain.csproj",
       "msbuildProject": "../SampleApplication.Core.Domain/SampleApplication.Core.Domain.csproj"
+    },
+    "SampleApplication.Framework/1.0.0": {
+      "type": "project",
+      "path": "../../../SampleApplication.Framework/SampleApplication.Framework.csproj",
+      "msbuildProject": "../../../SampleApplication.Framework/SampleApplication.Framework.csproj"
     }
   },
   "projectFileDependencyGroups": {

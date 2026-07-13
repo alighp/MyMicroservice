@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SampleApplication.Core.ApplicationService;
-using SampleApplication.Core.Domain;
+using SampleApplication.Core.Domain.People;
 
 namespace SampleApplication.Infra.Data.SQL
 {
@@ -19,7 +19,7 @@ namespace SampleApplication.Infra.Data.SQL
             Context.SaveChanges();
         }
 
-        public Person? Find(int personId)
+        public Person? Find(long personId)
         {
             return Context.People.Include(x => x.PhoneNumbers).SingleOrDefault(x => x.Id == personId);
         }

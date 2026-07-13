@@ -22,13 +22,13 @@ namespace SampleApplication.Infra.Data.SQL.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("SampleApplication.Core.Domain.Person", b =>
+            modelBuilder.Entity("SampleApplication.Core.Domain.People.Person", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("bigint");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
 
                     b.Property<string>("FirstName")
                         .IsRequired()
@@ -55,8 +55,8 @@ namespace SampleApplication.Infra.Data.SQL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("PersonId")
-                        .HasColumnType("int");
+                    b.Property<long?>("PersonId")
+                        .HasColumnType("bigint");
 
                     b.HasKey("Id");
 
@@ -67,12 +67,12 @@ namespace SampleApplication.Infra.Data.SQL.Migrations
 
             modelBuilder.Entity("SampleApplication.Core.Domain.PhoneNumber", b =>
                 {
-                    b.HasOne("SampleApplication.Core.Domain.Person", null)
+                    b.HasOne("SampleApplication.Core.Domain.People.Person", null)
                         .WithMany("PhoneNumbers")
                         .HasForeignKey("PersonId");
                 });
 
-            modelBuilder.Entity("SampleApplication.Core.Domain.Person", b =>
+            modelBuilder.Entity("SampleApplication.Core.Domain.People.Person", b =>
                 {
                     b.Navigation("PhoneNumbers");
                 });

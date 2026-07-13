@@ -548,8 +548,16 @@
         }
       },
       "SampleApplication.Core.Domain/1.0.0": {
+        "dependencies": {
+          "SampleApplication.Framework": "1.0.0"
+        },
         "runtime": {
           "SampleApplication.Core.Domain.dll": {}
+        }
+      },
+      "SampleApplication.Framework/1.0.0": {
+        "runtime": {
+          "SampleApplication.Framework.dll": {}
         }
       },
       "SampleApplication.Infra.Data.SQL/1.0.0": {
@@ -918,6 +926,11 @@
       "sha512": ""
     },
     "SampleApplication.Core.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SampleApplication.Framework/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

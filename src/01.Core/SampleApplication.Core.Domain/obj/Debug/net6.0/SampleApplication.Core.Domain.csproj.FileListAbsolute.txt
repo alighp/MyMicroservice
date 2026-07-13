@@ -1,11 +1,14 @@
 C:\Users\Ali\source\repos\SampleApplication\src\01.Core\SampleApplication.Core.Domain\bin\Debug\net6.0\SampleApplication.Core.Domain.deps.json
 C:\Users\Ali\source\repos\SampleApplication\src\01.Core\SampleApplication.Core.Domain\bin\Debug\net6.0\SampleApplication.Core.Domain.dll
 C:\Users\Ali\source\repos\SampleApplication\src\01.Core\SampleApplication.Core.Domain\bin\Debug\net6.0\SampleApplication.Core.Domain.pdb
+C:\Users\Ali\source\repos\SampleApplication\src\01.Core\SampleApplication.Core.Domain\bin\Debug\net6.0\SampleApplication.Framework.dll
+C:\Users\Ali\source\repos\SampleApplication\src\01.Core\SampleApplication.Core.Domain\bin\Debug\net6.0\SampleApplication.Framework.pdb
 C:\Users\Ali\source\repos\SampleApplication\src\01.Core\SampleApplication.Core.Domain\obj\Debug\net6.0\SampleApplication.Core.Domain.csproj.AssemblyReference.cache
 C:\Users\Ali\source\repos\SampleApplication\src\01.Core\SampleApplication.Core.Domain\obj\Debug\net6.0\SampleApplication.Core.Domain.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Ali\source\repos\SampleApplication\src\01.Core\SampleApplication.Core.Domain\obj\Debug\net6.0\SampleApplication.Core.Domain.AssemblyInfoInputs.cache
 C:\Users\Ali\source\repos\SampleApplication\src\01.Core\SampleApplication.Core.Domain\obj\Debug\net6.0\SampleApplication.Core.Domain.AssemblyInfo.cs
 C:\Users\Ali\source\repos\SampleApplication\src\01.Core\SampleApplication.Core.Domain\obj\Debug\net6.0\SampleApplication.Core.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Ali\source\repos\SampleApplication\src\01.Core\SampleApplication.Core.Domain\obj\Debug\net6.0\SampleApplication.Core.Domain.csproj.CopyComplete
 C:\Users\Ali\source\repos\SampleApplication\src\01.Core\SampleApplication.Core.Domain\obj\Debug\net6.0\SampleApplication.Core.Domain.dll
 C:\Users\Ali\source\repos\SampleApplication\src\01.Core\SampleApplication.Core.Domain\obj\Debug\net6.0\refint\SampleApplication.Core.Domain.dll
 C:\Users\Ali\source\repos\SampleApplication\src\01.Core\SampleApplication.Core.Domain\obj\Debug\net6.0\SampleApplication.Core.Domain.pdb

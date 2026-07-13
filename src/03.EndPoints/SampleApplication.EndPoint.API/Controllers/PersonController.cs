@@ -21,7 +21,21 @@ namespace SampleApplication.EndPoint.API.Controllers
             service.AddPerson(dto);
             return Ok();
         }
-        [HttpPut]
+        [HttpPut("/change-first-name")]
+        public IActionResult ChangeFirstName(string firstName, long personId)
+        {
+            service.ChangeFirstName(firstName,personId);
+            return Ok();
+
+        }
+        [HttpPut("/change-last-name")]
+        public IActionResult LastFirstName(string lastName, long personId)
+        {
+            service.ChangeLastName(lastName, personId);
+            return Ok();
+
+        }
+        [HttpPut("add-phone-number")]
         public IActionResult AddPhoneNumberToPerson(AddNumberToPersonDto dto)
         {
             service.AddNumberToPerson(dto);

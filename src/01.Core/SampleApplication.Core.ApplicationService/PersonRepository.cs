@@ -1,11 +1,11 @@
-﻿using SampleApplication.Core.Domain;
+﻿using SampleApplication.Core.Domain.People;
 
 namespace SampleApplication.Core.ApplicationService
 {
     public interface PersonRepository
     {
         public void Add(Person peson);
-        Person? Find(int personId);
+        Person? Find(long personId);
         public void Update();
     }
 }

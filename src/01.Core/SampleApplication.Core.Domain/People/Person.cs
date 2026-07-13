@@ -1,8 +1,10 @@
-﻿namespace SampleApplication.Core.Domain
+﻿using SampleApplication.Core.Domain.People.Events;
+
+namespace SampleApplication.Core.Domain.People
 {
-    public class Person
+    public class Person : Entity<long>
     {
-        public int Id { get; private set; }
+        //public int Id { get; private set; }
         public string FirstName { get; private set; }
         public string LastName { get; private set; }
 
@@ -24,9 +26,22 @@
             {
                 throw new ArgumentNullException("Invalid input for phoneNumber");
             }
-            this.FirstName = firstName;
-            this.LastName = lastName;
+            FirstName = firstName;
+            LastName = lastName;
             PhoneNumbers.Add(phoneNumber);
+            PersonCreated @event = new(FirstName,LastName);
+            AddEvent(@event);
+        }
+
+        public void ChangeFirstName(string firstName)
+        {
+            if (firstName == null || string.IsNullOrWhiteSpace(firstName))
+            {
+                throw new ArgumentNullException("Invalid input for firstName");
+            }
+            FirstName = firstName;
+            FirstNameChanged @event = new(FirstName, Id);
+            AddEvent(@event);
         }
 
         public void AddPhoneNumber(PhoneNumber phoneNumber)
@@ -38,11 +53,23 @@
         public override bool Equals(object? obj)
         {
             var other = obj as Person;
-            if(other == null)
+            if (other == null)
                 return false;
 
-            return other.Id == this.Id;
+            return other.Id == Id;
         }
+
+        public void ChangeLastName(string lastName)
+        {
+            if (lastName == null || string.IsNullOrWhiteSpace(lastName))
+            {
+                throw new ArgumentNullException("Invalid input for lastName");
+            }
+            LastName = lastName;
+            LastNameChanged @event = new(LastName, Id);
+            AddEvent(@event);
+        }
+
         public override int GetHashCode()
         {
             return base.GetHashCode();

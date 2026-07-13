@@ -1,54 +1,41 @@
-﻿namespace SampleApplication.Framework
+﻿using SampleApplication.Framework;
+
+public abstract class Entity<TId> : IEquatable<Entity<TId>>
 {
-    public abstract class Entity<TId>
+    public TId Id { get; protected set; }
+
+    private readonly List<IDomainEvent> _events = new List<IDomainEvent>();
+
+
+    public void AddEvent(IDomainEvent @event) 
     {
-        public TId Id { get; protected set; }
-
-        private readonly List<IDomainEvent> _domainEvents = new();
-
-        public IReadOnlyCollection<IDomainEvent> DomainEvents =>
-            _domainEvents.AsReadOnly();
-
-        public void AddDomainEvent(IDomainEvent domainEvent)
-        {
-            _domainEvents.Add(domainEvent);
-        }
-
-        public void RemoveDomainEvent(IDomainEvent domainEvent)
-        {
-            _domainEvents.Remove(domainEvent);
-        }
-
-        public void ClearDomainEvents()
-        {
-            _domainEvents.Clear();
-        }
-
-        public override bool Equals(object? obj)
-        {
-            if (obj is not Entity<TId> other)
-                return false;
-
-            if (ReferenceEquals(this, other))
-                return true;
-
-            if (Id == null || other.Id == null)
-                return false;
-
-            return Id.Equals(other.Id);
-        }
-
-        public override int GetHashCode()
-        {
-            return Id?.GetHashCode() ?? 0;
-        }
-
-        public static bool operator ==(Entity<TId>? left, Entity<TId>? right)
-            => Equals(left, right);
-
-        public static bool operator !=(Entity<TId>? left, Entity<TId>? right)
-            => !Equals(left, right);
+        _events.Add(@event);
     }
 
+    public bool Equals(Entity<TId>? other)
+    {
+        if (other is null)
+            return false;
 
+        if (ReferenceEquals(this, other))
+            return true;
+
+        return EqualityComparer<TId>.Default.Equals(Id, other.Id);
+    }
+
+    public override bool Equals(object? obj)
+    {
+        return Equals(obj as Entity<TId>);
+    }
+
+    public override int GetHashCode()
+    {
+        return EqualityComparer<TId>.Default.GetHashCode(Id!);
+    }
+
+    public static bool operator ==(Entity<TId>? left, Entity<TId>? right)
+        => Equals(left, right);
+
+    public static bool operator !=(Entity<TId>? left, Entity<TId>? right)
+        => !Equals(left, right);
 }

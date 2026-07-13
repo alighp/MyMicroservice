@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "SampleApplication.Framework/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/SampleApplication.Framework.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SampleApplication.Framework.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "SampleApplication.Framework/1.0.0": {
+      "type": "project",
+      "path": "../../../SampleApplication.Framework/SampleApplication.Framework.csproj",
+      "msbuildProject": "../../../SampleApplication.Framework/SampleApplication.Framework.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "SampleApplication.Framework >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Ali\\.nuget\\packages\\": {},
@@ -38,7 +57,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Ali\\source\\repos\\SampleApplication\\SampleApplication.Framework\\SampleApplication.Framework.csproj": {
+              "projectPath": "C:\\Users\\Ali\\source\\repos\\SampleApplication\\SampleApplication.Framework\\SampleApplication.Framework.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

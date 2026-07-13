@@ -4,7 +4,7 @@
 
 namespace SampleApplication.Infra.Data.SQL.Migrations
 {
-    public partial class initdb : Migration
+    public partial class initialmigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -12,7 +12,7 @@ namespace SampleApplication.Infra.Data.SQL.Migrations
                 name: "People",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     FirstName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     LastName = table.Column<string>(type: "nvarchar(max)", nullable: false)
@@ -29,7 +29,7 @@ namespace SampleApplication.Infra.Data.SQL.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Number = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    PersonId = table.Column<int>(type: "int", nullable: true)
+                    PersonId = table.Column<long>(type: "bigint", nullable: true)
                 },
                 constraints: table =>
                 {

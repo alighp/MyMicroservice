@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using SampleApplication.Core.Domain;
+using SampleApplication.Core.Domain.People;
 
 namespace SampleApplication.Infra.Data
 {

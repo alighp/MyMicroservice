@@ -10,8 +10,8 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddTransient<PersonAppService>();
-builder.Services.AddTransient<PersonRepository, EFPersonRepository>();
+builder.Services.AddScoped<PersonAppService>();
+builder.Services.AddScoped<PersonRepository, EFPersonRepository>();
 builder.Services.AddDbContext<EFDBContext>();
 var app = builder.Build();
 
