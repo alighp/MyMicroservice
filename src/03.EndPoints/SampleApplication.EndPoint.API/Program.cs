@@ -1,3 +1,4 @@
+using Microsoft.EntityFrameworkCore;
 using SampleApplication.Core.ApplicationService.People;
 using SampleApplication.Core.ApplicationService.People.EventHandlers;
 using SampleApplication.Core.Domain.People.Events;
@@ -13,10 +14,12 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddScoped<PersonAppService>();
-builder.Services.AddScoped<PersonRepository, EFPersonRepository>();
-builder.Services.AddDbContext<EFDBContext>();
+builder.Services.AddDbContext<EFDBContext>(x => x.UseSqlServer("server=. ; initial catalog = MicroService ; Trusted_connection = true"));
+builder.Services.AddTransient<PersonAppService>();
+builder.Services.AddTransient<PersonRepository, EFPersonRepository>();
 builder.Services.AddTransient<IDomainEventHandler<PersonCreated>, WritePersonCreatedToConsole>();
+builder.Services.AddTransient<IDomainEventHandler<LastNameChanged>, WriteLastNameUpdatedToConsole>();
+builder.Services.AddTransient<IDomainEventHandler<FirstNameChanged>, WriteFirstNameUpdatedToConsole>();
 builder.Services.AddTransient<IDomainEventDispatcher, DomainEventDispatcher>();
 var app = builder.Build();
 
