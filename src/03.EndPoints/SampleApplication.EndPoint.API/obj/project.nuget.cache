@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "1ogNBM2w8DPHb9GCCbO8xj++nobUtmCCNR4veIl1cYtpoE5VmfLFKYo8yjnvzrJw7ws2CmLqrFJDpHvcdMptsQ==",
+  "dgSpecHash": "OmcQWni/MfMsR7bBjKZFVTB1l4D19qnJgM1TUSLR7wp1lwwY0O4M0ycnQqlNXtxMfWDkhU0xWv5WM+P2FwGiFw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Ali\\source\\repos\\SampleApplication\\src\\03.EndPoints\\SampleApplication.EndPoint.API\\SampleApplication.EndPoint.API.csproj",
   "expectedPackageFiles": [
@@ -36,6 +36,7 @@
     "C:\\Users\\Ali\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
     "C:\\Users\\Ali\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\Ali\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "C:\\Users\\Ali\\.nuget\\packages\\newtonsoft.json\\13.0.4\\newtonsoft.json.13.0.4.nupkg.sha512",
     "C:\\Users\\Ali\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
     "C:\\Users\\Ali\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
     "C:\\Users\\Ali\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",

@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "pXnn1ZKU4JKGAn12t7panc5/3zVHtH8MU2AMTLnj1L1Pi6MRCYyUTMFQCcnfncmqwobv3LxAII7++N9P5Nxh1g==",
+  "dgSpecHash": "pULuCA551pMAWAMIUPW+0mFab4oR74na6Ne7/9C/ZNm8umyEsjmnlqMyoluynPC6dXh1i5herHwmoaKE54QLYw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Ali\\source\\repos\\SampleApplication\\src\\01.Core\\SampleApplication.Core.ApplicationService\\SampleApplication.Core.ApplicationService.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Ali\\.nuget\\packages\\newtonsoft.json\\13.0.4\\newtonsoft.json.13.0.4.nupkg.sha512"
+  ],
   "logs": []
 }

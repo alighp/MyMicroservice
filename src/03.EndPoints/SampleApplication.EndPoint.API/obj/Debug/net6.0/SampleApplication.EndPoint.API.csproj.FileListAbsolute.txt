@@ -77,3 +77,4 @@ C:\Users\Ali\source\repos\SampleApplication\src\03.EndPoints\SampleApplication.E
 C:\Users\Ali\source\repos\SampleApplication\src\03.EndPoints\SampleApplication.EndPoint.API\obj\Debug\net6.0\SampleApplication.EndPoint.API.pdb
 C:\Users\Ali\source\repos\SampleApplication\src\03.EndPoints\SampleApplication.EndPoint.API\obj\Debug\net6.0\SampleApplication.EndPoint.API.genruntimeconfig.cache
 C:\Users\Ali\source\repos\SampleApplication\src\03.EndPoints\SampleApplication.EndPoint.API\obj\Debug\net6.0\ref\SampleApplication.EndPoint.API.dll
+C:\Users\Ali\source\repos\SampleApplication\src\03.EndPoints\SampleApplication.EndPoint.API\bin\Debug\net6.0\Newtonsoft.Json.dll

@@ -1,4 +1,4 @@
-using SampleApplication.Core.ApplicationService;
+using SampleApplication.Core.ApplicationService.People;
 using SampleApplication.Infra.Data;
 using SampleApplication.Infra.Data.SQL;
 

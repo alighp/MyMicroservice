@@ -1,6 +1,6 @@
 ﻿using SampleApplication.Core.Domain.People;
 
-namespace SampleApplication.Core.ApplicationService
+namespace SampleApplication.Core.ApplicationService.People
 {
     public interface PersonRepository
     {

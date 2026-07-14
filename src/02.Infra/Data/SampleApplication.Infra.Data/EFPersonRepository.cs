@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using SampleApplication.Core.ApplicationService;
+using SampleApplication.Core.ApplicationService.People;
 using SampleApplication.Core.Domain.People;
 
 namespace SampleApplication.Infra.Data.SQL

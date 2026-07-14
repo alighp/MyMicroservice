@@ -1,4 +1,4 @@
-﻿namespace SampleApplication.Core.ApplicationService
+﻿namespace SampleApplication.Core.ApplicationService.People
 {
     public class CreatePersonDto
     {

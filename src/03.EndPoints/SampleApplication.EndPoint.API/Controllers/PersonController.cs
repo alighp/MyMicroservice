@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using SampleApplication.Core.ApplicationService;
-using static SampleApplication.Core.ApplicationService.PersonAppService;
+using SampleApplication.Core.ApplicationService.People;
+using static SampleApplication.Core.ApplicationService.People.PersonAppService;
 
 namespace SampleApplication.EndPoint.API.Controllers
 {
