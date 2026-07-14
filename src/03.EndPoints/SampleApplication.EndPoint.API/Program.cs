@@ -1,4 +1,7 @@
 using SampleApplication.Core.ApplicationService.People;
+using SampleApplication.Core.ApplicationService.People.EventHandlers;
+using SampleApplication.Core.Domain.People.Events;
+using SampleApplication.Framework;
 using SampleApplication.Infra.Data;
 using SampleApplication.Infra.Data.SQL;
 
@@ -13,6 +16,8 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<PersonAppService>();
 builder.Services.AddScoped<PersonRepository, EFPersonRepository>();
 builder.Services.AddDbContext<EFDBContext>();
+builder.Services.AddTransient<IDomainEventHandler<PersonCreated>, WritePersonCreatedToConsole>();
+builder.Services.AddTransient<IDomainEventDispatcher, DomainEventDispatcher>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

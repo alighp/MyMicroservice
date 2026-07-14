@@ -1,5 +1,7 @@
 ﻿using SampleApplication.Core.Domain;
 using SampleApplication.Core.Domain.People;
+using SampleApplication.Framework;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace SampleApplication.Core.ApplicationService.People
 {
@@ -24,6 +26,7 @@ namespace SampleApplication.Core.ApplicationService.People
                 throw new ApplicationException("Person not fount");
             person.ChangeFirstName(firstName);
             personRepository.Update();
+
         }
 
         public void AddNumberToPerson(AddNumberToPersonDto dto)
@@ -44,5 +47,8 @@ namespace SampleApplication.Core.ApplicationService.People
             person.ChangeLastName(lastName);
             personRepository.Update();
         }
+
+
+
     }
 }
