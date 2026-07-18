@@ -16,6 +16,7 @@ C:\Users\Ali\source\repos\SampleApplication\src\03.EndPoints\SampleApplication.E
 C:\Users\Ali\source\repos\SampleApplication\src\03.EndPoints\SampleApplication.EndPoint.API\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
 C:\Users\Ali\source\repos\SampleApplication\src\03.EndPoints\SampleApplication.EndPoint.API\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
 C:\Users\Ali\source\repos\SampleApplication\src\03.EndPoints\SampleApplication.EndPoint.API\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Ali\source\repos\SampleApplication\src\03.EndPoints\SampleApplication.EndPoint.API\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\Ali\source\repos\SampleApplication\src\03.EndPoints\SampleApplication.EndPoint.API\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
 C:\Users\Ali\source\repos\SampleApplication\src\03.EndPoints\SampleApplication.EndPoint.API\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\Ali\source\repos\SampleApplication\src\03.EndPoints\SampleApplication.EndPoint.API\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
@@ -29,6 +30,7 @@ C:\Users\Ali\source\repos\SampleApplication\src\03.EndPoints\SampleApplication.E
 C:\Users\Ali\source\repos\SampleApplication\src\03.EndPoints\SampleApplication.EndPoint.API\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\Ali\source\repos\SampleApplication\src\03.EndPoints\SampleApplication.EndPoint.API\bin\Debug\net6.0\Microsoft.OpenApi.dll
 C:\Users\Ali\source\repos\SampleApplication\src\03.EndPoints\SampleApplication.EndPoint.API\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Ali\source\repos\SampleApplication\src\03.EndPoints\SampleApplication.EndPoint.API\bin\Debug\net6.0\Newtonsoft.Json.dll
 C:\Users\Ali\source\repos\SampleApplication\src\03.EndPoints\SampleApplication.EndPoint.API\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\Ali\source\repos\SampleApplication\src\03.EndPoints\SampleApplication.EndPoint.API\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\Ali\source\repos\SampleApplication\src\03.EndPoints\SampleApplication.EndPoint.API\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -77,5 +79,3 @@ C:\Users\Ali\source\repos\SampleApplication\src\03.EndPoints\SampleApplication.E
 C:\Users\Ali\source\repos\SampleApplication\src\03.EndPoints\SampleApplication.EndPoint.API\obj\Debug\net6.0\SampleApplication.EndPoint.API.pdb
 C:\Users\Ali\source\repos\SampleApplication\src\03.EndPoints\SampleApplication.EndPoint.API\obj\Debug\net6.0\SampleApplication.EndPoint.API.genruntimeconfig.cache
 C:\Users\Ali\source\repos\SampleApplication\src\03.EndPoints\SampleApplication.EndPoint.API\obj\Debug\net6.0\ref\SampleApplication.EndPoint.API.dll
-C:\Users\Ali\source\repos\SampleApplication\src\03.EndPoints\SampleApplication.EndPoint.API\bin\Debug\net6.0\Newtonsoft.Json.dll
-C:\Users\Ali\source\repos\SampleApplication\src\03.EndPoints\SampleApplication.EndPoint.API\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll

@@ -1,16 +1,16 @@
-﻿using SampleApplication.Core.Domain.Customers.Events;
+﻿using SampleApplication.Core.Domain.Customers;
+using SampleApplication.Core.Domain.Customers.Events;
 using SampleApplication.Framework;
 
 namespace SampleApplication.Core.Domain.People
 {
     public class Customer : AggregateRoot<long>
     {
-        //public int Id { get; private set; }
         public string FirstName { get; private set; }
         public string LastName { get; private set; }
 
         private readonly List<PhoneNumber> _phoneNumbers = new();
-        public IReadOnlyList<PhoneNumber> PhoneNumbers => _phoneNumbers;
+        public IReadOnlyList<PhoneNumber> PhoneNumbers => _phoneNumbers.AsReadOnly();
         private Customer()
         {
         }
@@ -46,20 +46,6 @@ namespace SampleApplication.Core.Domain.People
             AddEvent(@event);
         }
 
-        public void AddPhoneNumber(PhoneNumber phoneNumber)
-        {
-            if (PhoneNumbers.Any(x => x.Number == phoneNumber.Number))
-                throw new InvalidDataException("PhoneNumber is duplicate");
-            _phoneNumbers.Add(phoneNumber);
-        }
-        public override bool Equals(object? obj)
-        {
-            var other = obj as Customer;
-            if (other == null)
-                return false;
-
-            return other.Id == Id;
-        }
 
         public void ChangeLastName(string lastName)
         {
@@ -71,10 +57,11 @@ namespace SampleApplication.Core.Domain.People
             LastNameChanged @event = new(LastName, Id);
             AddEvent(@event);
         }
-
-        public override int GetHashCode()
+        public void AddPhoneNumber(PhoneNumber phoneNumber)
         {
-            return base.GetHashCode();
+            if (PhoneNumbers.Any(x => x.Number == phoneNumber.Number))
+                throw new InvalidDataException("PhoneNumber is duplicate");
+            _phoneNumbers.Add(phoneNumber);
         }
     }
 }

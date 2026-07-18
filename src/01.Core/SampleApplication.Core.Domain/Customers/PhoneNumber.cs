@@ -1,6 +1,6 @@
 ﻿using SampleApplication.Framework;
 
-namespace SampleApplication.Core.Domain.People
+namespace SampleApplication.Core.Domain.Customers
 {
     public class PhoneNumber : ValueObject
     {

@@ -1,8 +1,6 @@
-﻿using SampleApplication.Core.Domain;
+﻿using SampleApplication.Core.ApplicationService.Cusomers;
+using SampleApplication.Core.Domain.Customers;
 using SampleApplication.Core.Domain.People;
-using SampleApplication.Framework;
-using Microsoft.Extensions.DependencyInjection;
-using SampleApplication.Core.ApplicationService.Cusomers;
 
 namespace SampleApplication.Core.ApplicationService.Customers
 {
@@ -16,7 +14,7 @@ namespace SampleApplication.Core.ApplicationService.Customers
         }
         public void AddPerson(CreateCustomerDto dto)
         {
-            var person = new Customer(dto.FirstName, dto.LastName, new PhoneNumber(number : dto.PhoneNumber));
+            var person = new Customer(dto.FirstName, dto.LastName, new PhoneNumber(number: dto.PhoneNumber));
             personRepository.Add(person);
         }
 
