@@ -41,7 +41,7 @@ namespace SampleApplication.Infra.Data
 
         private void AddToOutBox()
         {
-            var entities = ChangeTracker.Entries<Entity<long>>().Where(x => x.State == EntityState.Added || x.State == EntityState.Modified)
+            var entities = ChangeTracker.Entries<AggregateRoot<long>>().Where(x => x.State == EntityState.Added || x.State == EntityState.Modified)
                 .Select(c => c.Entity).ToList();
             var now = DateTime.Now;
             foreach (var entity in entities)
@@ -68,7 +68,7 @@ namespace SampleApplication.Infra.Data
         private void DispatchEvents()
         {
             var dispatcher = this.GetService<IDomainEventDispatcher>();
-            var entities = ChangeTracker.Entries<Entity<long>>().Where(x => x.State == EntityState.Added || x.State == EntityState.Modified)
+            var entities = ChangeTracker.Entries<AggregateRoot<long>>().Where(x => x.State == EntityState.Added || x.State == EntityState.Modified)
                 .Select(c => c.Entity).ToList();
             foreach (var entity in entities)
             {

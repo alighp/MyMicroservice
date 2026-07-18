@@ -16,7 +16,7 @@ namespace SampleApplication.Core.ApplicationService.Customers
         }
         public void AddPerson(CreateCustomerDto dto)
         {
-            var person = new Customer(dto.FirstName, dto.LastName, new PhoneNumber { Number = dto.PhoneNumber });
+            var person = new Customer(dto.FirstName, dto.LastName, new PhoneNumber(number : dto.PhoneNumber));
             personRepository.Add(person);
         }
 

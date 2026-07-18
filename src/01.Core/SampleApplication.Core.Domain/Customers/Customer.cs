@@ -1,14 +1,16 @@
 ﻿using SampleApplication.Core.Domain.Customers.Events;
+using SampleApplication.Framework;
 
 namespace SampleApplication.Core.Domain.People
 {
-    public class Customer : Entity<long>
+    public class Customer : AggregateRoot<long>
     {
         //public int Id { get; private set; }
         public string FirstName { get; private set; }
         public string LastName { get; private set; }
 
-        public List<PhoneNumber> PhoneNumbers { get; set; } = new();
+        private readonly List<PhoneNumber> _phoneNumbers = new();
+        public IReadOnlyList<PhoneNumber> PhoneNumbers => _phoneNumbers;
         private Customer()
         {
         }
@@ -28,7 +30,7 @@ namespace SampleApplication.Core.Domain.People
             }
             FirstName = firstName;
             LastName = lastName;
-            PhoneNumbers.Add(phoneNumber);
+            _phoneNumbers.Add(phoneNumber);
             CustomerCreated @event = new(FirstName,LastName);
             AddEvent(@event);
         }
@@ -48,7 +50,7 @@ namespace SampleApplication.Core.Domain.People
         {
             if (PhoneNumbers.Any(x => x.Number == phoneNumber.Number))
                 throw new InvalidDataException("PhoneNumber is duplicate");
-            PhoneNumbers.Add(phoneNumber);
+            _phoneNumbers.Add(phoneNumber);
         }
         public override bool Equals(object? obj)
         {

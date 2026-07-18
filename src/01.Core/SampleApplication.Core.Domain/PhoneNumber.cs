@@ -1,20 +1,51 @@
-﻿namespace SampleApplication.Core.Domain
-{
-    public class PhoneNumber 
-    {
-        public int Id { get; set; }
-        public string Number { get; set; }
-        public PhoneNumber()
-        {
+﻿using SampleApplication.Framework;
 
-        }
-        public PhoneNumber(string phoneNumber)
+namespace SampleApplication.Core.Domain.People
+{
+    public class PhoneNumber : ValueObject
+    {
+        public string Number { get; }
+        public PhoneNumberType Type { get; } // مثلاً: Mobile, Home, Work
+
+        public PhoneNumber(string number, PhoneNumberType type = PhoneNumberType.Mobile)
         {
-            if (string.IsNullOrWhiteSpace(phoneNumber))
-            {
-                throw new ArgumentNullException("Invalid input for phoneNumber");
-            }
-            Number = phoneNumber; 
+            if (string.IsNullOrWhiteSpace(number))
+                throw new ArgumentException("Phone number cannot be empty", nameof(number));
+
+            // اعتبارسنجی فرمت شماره
+            if (!IsValidPhoneNumber(number))
+                throw new ArgumentException("Invalid phone number format", nameof(number));
+
+            Number = number;
+            Type = type;
         }
+
+        private bool IsValidPhoneNumber(string number)
+        {
+            // منطق اعتبارسنجی شماره تلفن
+            // مثلاً: Regex برای شماره ایران
+            return !string.IsNullOrWhiteSpace(number) && number.Length >= 10;
+        }
+
+        protected override IEnumerable<object> GetEqualityComponents()
+        {
+            yield return Number;
+            yield return Type;
+        }
+
+        // متدهای کمکی
+        public override string ToString() => Number;
+
+        // implicit conversion برای سهولت استفاده
+        public static implicit operator string(PhoneNumber phoneNumber) => phoneNumber.Number;
+        public static explicit operator PhoneNumber(string number) => new PhoneNumber(number);
+    }
+
+    public enum PhoneNumberType
+    {
+        Mobile,
+        Home,
+        Work,
+        Fax
     }
 }

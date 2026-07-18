@@ -1,8 +1,7 @@
 ﻿namespace SampleApplication.Core.Domain.AddressBooks
 {
-    public class AddressLine
+    public class AddressLine : Entity<long>
     {
-        public long Id { get; set; }
         public long AddressBookId { get; set; }
         public string City { get; set; }
         public string Address { get; set; }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SampleApplication.Framework;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SampleApplication.Core.Domain.Orders
 {
-    public class Order
+    public class Order : AggregateRoot<long>
     {
         public Order(long addressLineId, DateTime orderDate, List<OrderLine> orderLines)
         {
@@ -28,7 +29,7 @@ namespace SampleApplication.Core.Domain.Orders
             if (newCount < 0)
                 throw new ArgumentException("orderLine Count cant be negetive");
 
-            var orderLine = _orderLines.SingleOrDefault(x => x.LineId == orderLineId);
+            var orderLine = _orderLines.SingleOrDefault(x => x.Id == orderLineId);
             if(orderLine == null)
                 throw new ArgumentException("orderLine not found");
 

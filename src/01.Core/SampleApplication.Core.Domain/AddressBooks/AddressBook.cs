@@ -1,8 +1,9 @@
-﻿namespace SampleApplication.Core.Domain.AddressBooks
+﻿using SampleApplication.Framework;
+
+namespace SampleApplication.Core.Domain.AddressBooks
 {
-    public class AddressBook
+    public class AddressBook : AggregateRoot<long>
     {
-        public long Id { get; set; }
         public long CustomerId { get; set; }
         private readonly List<AddressLine> _addressLines = new();
         public IReadOnlyList<AddressLine> AddressLines => _addressLines;

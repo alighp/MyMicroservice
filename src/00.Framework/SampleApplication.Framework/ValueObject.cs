@@ -1,6 +1,6 @@
 ﻿namespace SampleApplication.Framework
 {
-    public abstract class BaseValueObject
+    public abstract class ValueObject
     {
         protected abstract IEnumerable<object?> GetEqualityComponents();
 
@@ -9,7 +9,7 @@
             if (obj is null || obj.GetType() != GetType())
                 return false;
 
-            var other = (BaseValueObject)obj;
+            var other = (ValueObject)obj;
 
             return GetEqualityComponents()
                 .SequenceEqual(other.GetEqualityComponents());
@@ -28,15 +28,15 @@
         }
 
         public static bool operator ==(
-            BaseValueObject? left,
-            BaseValueObject? right)
+            ValueObject? left,
+            ValueObject? right)
         {
             return Equals(left, right);
         }
 
         public static bool operator !=(
-            BaseValueObject? left,
-            BaseValueObject? right)
+            ValueObject? left,
+            ValueObject? right)
         {
             return !Equals(left, right);
         }

@@ -4,17 +4,7 @@ public abstract class Entity<TId> : IEquatable<Entity<TId>>
 {
     public TId Id { get; protected set; }
 
-    private readonly List<IDomainEvent> _events = new List<IDomainEvent>();
-    public IReadOnlyList<IDomainEvent> Events => _events;
-
-    protected void AddEvent(IDomainEvent @event) 
-    {
-        _events.Add(@event);
-    }
-    public void ClearEvent()
-    {
-        _events.Clear();
-    }
+  
     public bool Equals(Entity<TId>? other)
     {
         if (other is null)

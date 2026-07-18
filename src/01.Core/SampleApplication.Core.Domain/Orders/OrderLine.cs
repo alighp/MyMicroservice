@@ -1,8 +1,7 @@
 ﻿namespace SampleApplication.Core.Domain.Orders
 {
-    public class OrderLine 
+    public class OrderLine : Entity<long>
     {
-        public long LineId { get; private set; }
         public long ProductId { get; private set; }
         public int Price { get; private set; }
         public int Count { get; private set; }

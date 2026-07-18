@@ -1,6 +1,8 @@
-﻿namespace SampleApplication.Core.Domain.Products
+﻿using SampleApplication.Framework;
+
+namespace SampleApplication.Core.Domain.Products
 {
-    public class Product
+    public class Product : AggregateRoot<long>
     {
         public string Name { get; set; }
         public int Price { get; set; }
