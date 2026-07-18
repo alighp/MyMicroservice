@@ -1,22 +1,23 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using SampleApplication.Core.ApplicationService.People;
-using static SampleApplication.Core.ApplicationService.People.PersonAppService;
+using SampleApplication.Core.ApplicationService.Cusomers;
+using SampleApplication.Core.ApplicationService.Customers;
+using static SampleApplication.Core.ApplicationService.Customers.CustomerAppService;
 
 namespace SampleApplication.EndPoint.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class PersonController : ControllerBase
+    public class CustomerController : ControllerBase
     {
-        private readonly PersonAppService service;
+        private readonly CustomerAppService service;
 
-        public PersonController(PersonAppService service)
+        public CustomerController(CustomerAppService service)
         {
             this.service = service;
         }
         [HttpPost]
-        public IActionResult AddPerson(CreatePersonDto dto)
+        public IActionResult AddPerson(CreateCustomerDto dto)
         {
             service.AddPerson(dto);
             return Ok();
@@ -36,7 +37,7 @@ namespace SampleApplication.EndPoint.API.Controllers
 
         }
         [HttpPut("add-phone-number")]
-        public IActionResult AddPhoneNumberToPerson(AddNumberToPersonDto dto)
+        public IActionResult AddPhoneNumberToPerson(AddNumberToCustomerDto dto)
         {
             service.AddNumberToPerson(dto);
             return Ok();

@@ -1,6 +1,6 @@
-﻿namespace SampleApplication.Core.ApplicationService.People
+﻿namespace SampleApplication.Core.ApplicationService.Customers
 {
-    public class CreatePersonDto
+    public class CreateCustomerDto
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }

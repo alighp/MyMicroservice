@@ -1,6 +1,6 @@
 ﻿using SampleApplication.Framework;
 
-namespace SampleApplication.Core.Domain.People.Events
+namespace SampleApplication.Core.Domain.Customers.Events
 {
     public class FirstNameChanged : IDomainEvent
     {

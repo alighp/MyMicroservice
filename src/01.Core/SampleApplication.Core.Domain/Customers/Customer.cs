@@ -1,18 +1,18 @@
-﻿using SampleApplication.Core.Domain.People.Events;
+﻿using SampleApplication.Core.Domain.Customers.Events;
 
 namespace SampleApplication.Core.Domain.People
 {
-    public class Person : Entity<long>
+    public class Customer : Entity<long>
     {
         //public int Id { get; private set; }
         public string FirstName { get; private set; }
         public string LastName { get; private set; }
 
         public List<PhoneNumber> PhoneNumbers { get; set; } = new();
-        private Person()
+        private Customer()
         {
         }
-        public Person(string firstName, string lastName, PhoneNumber phoneNumber)
+        public Customer(string firstName, string lastName, PhoneNumber phoneNumber)
         {
             if (firstName == null || string.IsNullOrWhiteSpace(firstName))
             {
@@ -29,7 +29,7 @@ namespace SampleApplication.Core.Domain.People
             FirstName = firstName;
             LastName = lastName;
             PhoneNumbers.Add(phoneNumber);
-            PersonCreated @event = new(FirstName,LastName);
+            CustomerCreated @event = new(FirstName,LastName);
             AddEvent(@event);
         }
 
@@ -52,7 +52,7 @@ namespace SampleApplication.Core.Domain.People
         }
         public override bool Equals(object? obj)
         {
-            var other = obj as Person;
+            var other = obj as Customer;
             if (other == null)
                 return false;
 

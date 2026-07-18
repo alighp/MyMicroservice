@@ -22,7 +22,7 @@ namespace SampleApplication.Infra.Data.SQL.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("SampleApplication.Core.Domain.People.Person", b =>
+            modelBuilder.Entity("SampleApplication.Core.Domain.People.Customer", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
@@ -51,16 +51,16 @@ namespace SampleApplication.Infra.Data.SQL.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
+                    b.Property<long?>("CustomerId")
+                        .HasColumnType("bigint");
+
                     b.Property<string>("Number")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<long?>("PersonId")
-                        .HasColumnType("bigint");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("PersonId");
+                    b.HasIndex("CustomerId");
 
                     b.ToTable("PhoneNumber");
                 });
@@ -117,12 +117,12 @@ namespace SampleApplication.Infra.Data.SQL.Migrations
 
             modelBuilder.Entity("SampleApplication.Core.Domain.PhoneNumber", b =>
                 {
-                    b.HasOne("SampleApplication.Core.Domain.People.Person", null)
+                    b.HasOne("SampleApplication.Core.Domain.People.Customer", null)
                         .WithMany("PhoneNumbers")
-                        .HasForeignKey("PersonId");
+                        .HasForeignKey("CustomerId");
                 });
 
-            modelBuilder.Entity("SampleApplication.Core.Domain.People.Person", b =>
+            modelBuilder.Entity("SampleApplication.Core.Domain.People.Customer", b =>
                 {
                     b.Navigation("PhoneNumbers");
                 });

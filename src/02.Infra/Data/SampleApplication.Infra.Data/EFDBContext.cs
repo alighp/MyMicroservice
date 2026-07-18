@@ -8,7 +8,7 @@ namespace SampleApplication.Infra.Data
 {
     public class EFDBContext : DbContext
     {
-        public DbSet<Person> People { get; set; }
+        public DbSet<Customer> People { get; set; }
         public DbSet<OutBoxEventItem> OutBoxEventItems { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

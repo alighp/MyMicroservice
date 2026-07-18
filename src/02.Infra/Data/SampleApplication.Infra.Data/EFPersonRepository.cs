@@ -1,10 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using SampleApplication.Core.ApplicationService.People;
+using SampleApplication.Core.ApplicationService.Customers;
 using SampleApplication.Core.Domain.People;
 
 namespace SampleApplication.Infra.Data.SQL
 {
-    public class EFPersonRepository : PersonRepository
+    public class EFPersonRepository : CustomerRepository
     {
         public EFPersonRepository(EFDBContext context)
         {
@@ -13,13 +13,13 @@ namespace SampleApplication.Infra.Data.SQL
 
         public EFDBContext Context { get; }
 
-        public void Add(Person peson)
+        public void Add(Customer peson)
         {
             Context.People.Add(peson);
             Context.SaveChanges();
         }
 
-        public Person? Find(long personId)
+        public Customer? Find(long personId)
         {
             return Context.People.Include(x => x.PhoneNumbers).SingleOrDefault(x => x.Id == personId);
         }

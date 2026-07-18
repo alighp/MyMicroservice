@@ -1,12 +1,12 @@
 ﻿using Newtonsoft.Json;
-using SampleApplication.Core.Domain.People.Events;
+using SampleApplication.Core.Domain.Customers.Events;
 using SampleApplication.Framework;
 
-namespace SampleApplication.Core.ApplicationService.People.EventHandlers
+namespace SampleApplication.Core.ApplicationService.Customers.EventHandlers
 {
-    public class WritePersonCreatedToConsole : IDomainEventHandler<PersonCreated>
+    public class WriteCustomerCreatedToConsole : IDomainEventHandler<CustomerCreated>
     {
-        public Task Handle(PersonCreated domainEvent)
+        public Task Handle(CustomerCreated domainEvent)
         {
             Console.WriteLine(JsonConvert.SerializeObject(domainEvent));
             return Task.CompletedTask;

@@ -2,20 +2,21 @@
 using SampleApplication.Core.Domain.People;
 using SampleApplication.Framework;
 using Microsoft.Extensions.DependencyInjection;
+using SampleApplication.Core.ApplicationService.Cusomers;
 
-namespace SampleApplication.Core.ApplicationService.People
+namespace SampleApplication.Core.ApplicationService.Customers
 {
-    public partial class PersonAppService
+    public class CustomerAppService
     {
-        private readonly PersonRepository personRepository;
+        private readonly CustomerRepository personRepository;
 
-        public PersonAppService(PersonRepository personRepository)
+        public CustomerAppService(CustomerRepository personRepository)
         {
             this.personRepository = personRepository;
         }
-        public void AddPerson(CreatePersonDto dto)
+        public void AddPerson(CreateCustomerDto dto)
         {
-            var person = new Person(dto.FirstName, dto.LastName, new PhoneNumber { Number = dto.PhoneNumber });
+            var person = new Customer(dto.FirstName, dto.LastName, new PhoneNumber { Number = dto.PhoneNumber });
             personRepository.Add(person);
         }
 
@@ -29,9 +30,9 @@ namespace SampleApplication.Core.ApplicationService.People
 
         }
 
-        public void AddNumberToPerson(AddNumberToPersonDto dto)
+        public void AddNumberToPerson(AddNumberToCustomerDto dto)
         {
-            var person = personRepository.Find(dto.PersonId);
+            var person = personRepository.Find(dto.CustomerId);
             if (person == null)
                 throw new ApplicationException("Person not fount");
             person.AddPhoneNumber(new PhoneNumber(dto.Number));
