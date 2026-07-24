@@ -1,0 +1,72 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Infrastructure;
+using Newtonsoft.Json;
+
+namespace SampleApplication.Framework
+{
+    public class BaseCommandDBContext : DbContext
+    {
+        public BaseCommandDBContext(DbContextOptions options) : base(options)
+        {
+        }
+
+        public DbSet<OutBoxEventItem> OutBoxEventItems { get; set; }
+        public override int SaveChanges()
+        {
+            HandelBeforeSaveChanges();
+            return base.SaveChanges();
+        }
+        public override Task<int> SaveChangesAsync(bool acceptAllChangesOnSuccess, CancellationToken cancellationToken = default)
+        {
+            return base.SaveChangesAsync(acceptAllChangesOnSuccess, cancellationToken);
+        }
+
+        public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
+        {
+            return base.SaveChangesAsync(cancellationToken);
+        }
+        private void HandelBeforeSaveChanges()
+        {
+            AddToOutBox();
+            DispatchEvents();
+        }
+
+        private void AddToOutBox()
+        {
+            var entities = ChangeTracker.Entries<AggregateRoot<long>>().Where(x => x.State == EntityState.Added || x.State == EntityState.Modified)
+                .Select(c => c.Entity).ToList();
+            var now = DateTime.Now;
+            foreach (var entity in entities)
+            {
+                foreach (var @event in entity.Events)
+                {
+                    OutBoxEventItems.Add(new OutBoxEventItem
+                    {
+                        EventId = Guid.NewGuid(),
+                        AccuredByUserId = "Ali",
+                        AccuredOn = now,
+                        AggregateId = "1",
+                        AggregateName = @event.GetType().Name,
+                        AggregateTypeName = @event.GetType().FullName,
+                        EventName = @event.GetType().Name,
+                        EventTypeName = @event.GetType().FullName,
+                        EventPayLoad = JsonConvert.SerializeObject(@event),
+                        IsProcessed = false
+                    });
+                }
+            }
+        }
+
+        private void DispatchEvents()
+        {
+            var dispatcher = this.GetService<IDomainEventDispatcher>();
+            var entities = ChangeTracker.Entries<AggregateRoot<long>>().Where(x => x.State == EntityState.Added || x.State == EntityState.Modified)
+                .Select(c => c.Entity).ToList();
+            foreach (var entity in entities)
+            {
+                dispatcher.Dispatch(entity.Events);
+                entity.ClearEvent();
+            }
+        }
+    }
+}

@@ -1,8 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using SampleApplication.Core.ApplicationService.Cusomers;
 using SampleApplication.Core.ApplicationService.Customers;
-using static SampleApplication.Core.ApplicationService.Customers.CustomerAppService;
 
 namespace SampleApplication.EndPoint.API.Controllers
 {
@@ -19,7 +17,7 @@ namespace SampleApplication.EndPoint.API.Controllers
         [HttpPost]
         public IActionResult AddPerson(CreateCustomerDto dto)
         {
-            service.AddPerson(dto);
+            service.AddCustomer(dto);
             return Ok();
         }
         [HttpPut("change-first-name")]

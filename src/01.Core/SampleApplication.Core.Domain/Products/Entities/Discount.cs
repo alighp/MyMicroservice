@@ -1,4 +1,4 @@
-﻿namespace SampleApplication.Core.Domain.Products
+﻿namespace SampleApplication.Core.Domain.Products.Entities
 {
     public class Discount : Entity<long>
     {

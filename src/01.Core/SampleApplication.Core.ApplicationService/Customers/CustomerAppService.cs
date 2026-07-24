@@ -1,50 +1,50 @@
 ﻿using SampleApplication.Core.ApplicationService.Cusomers;
 using SampleApplication.Core.Domain.Customers;
-using SampleApplication.Core.Domain.People;
+using SampleApplication.Core.Domain.Customers.Entities;
 
 namespace SampleApplication.Core.ApplicationService.Customers
 {
     public class CustomerAppService
     {
-        private readonly CustomerRepository personRepository;
+        private readonly ICustomerRepository customerRepository;
 
-        public CustomerAppService(CustomerRepository personRepository)
+        public CustomerAppService(ICustomerRepository customerRepository)
         {
-            this.personRepository = personRepository;
+            this.customerRepository = customerRepository;
         }
-        public void AddPerson(CreateCustomerDto dto)
+        public void AddCustomer(CreateCustomerDto dto)
         {
             var person = new Customer(dto.FirstName, dto.LastName, new PhoneNumber(number: dto.PhoneNumber));
-            personRepository.Add(person);
+            customerRepository.Add(person);
         }
 
-        public void ChangeFirstName(string firstName, long personId)
+        public void ChangeFirstName(string firstName, long customerId)
         {
-            var person = personRepository.Find(personId);
+            var person = customerRepository.Find(customerId);
             if (person == null)
-                throw new ApplicationException("Person not fount");
+                throw new ApplicationException("Customer not fount");
             person.ChangeFirstName(firstName);
-            personRepository.Update();
+            customerRepository.SaveChanges();
 
         }
 
         public void AddNumberToPerson(AddNumberToCustomerDto dto)
         {
-            var person = personRepository.Find(dto.CustomerId);
+            var person = customerRepository.Find(dto.CustomerId);
             if (person == null)
-                throw new ApplicationException("Person not fount");
+                throw new ApplicationException("Customer not fount");
             person.AddPhoneNumber(new PhoneNumber(dto.Number));
-            personRepository.Update();
+            customerRepository.SaveChanges();
 
         }
 
-        public void ChangeLastName(string lastName, long personId)
+        public void ChangeLastName(string lastName, long customerId)
         {
-            var person = personRepository.Find(personId);
+            var person = customerRepository.Find(customerId);
             if (person == null)
-                throw new ApplicationException("Person not fount");
+                throw new ApplicationException("Customer not fount");
             person.ChangeLastName(lastName);
-            personRepository.Update();
+            customerRepository.SaveChanges();
         }
 
 

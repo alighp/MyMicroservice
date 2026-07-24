@@ -740,7 +740,9 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "Microsoft.Extensions.DependencyInjection": "10.0.9"
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.36",
+          "Microsoft.Extensions.DependencyInjection": "10.0.9",
+          "Newtonsoft.Json": "13.0.4"
         },
         "compile": {
           "bin/placeholder/SampleApplication.Framework.dll": {}

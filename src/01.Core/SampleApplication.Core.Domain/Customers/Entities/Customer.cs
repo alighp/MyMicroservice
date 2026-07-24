@@ -1,8 +1,7 @@
-﻿using SampleApplication.Core.Domain.Customers;
-using SampleApplication.Core.Domain.Customers.Events;
+﻿using SampleApplication.Core.Domain.Customers.Events;
 using SampleApplication.Framework;
 
-namespace SampleApplication.Core.Domain.People
+namespace SampleApplication.Core.Domain.Customers.Entities
 {
     public class Customer : AggregateRoot<long>
     {
@@ -31,7 +30,7 @@ namespace SampleApplication.Core.Domain.People
             FirstName = firstName;
             LastName = lastName;
             _phoneNumbers.Add(phoneNumber);
-            CustomerCreated @event = new(FirstName,LastName);
+            CustomerCreated @event = new(FirstName, LastName);
             AddEvent(@event);
         }
 

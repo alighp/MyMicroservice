@@ -1,6 +1,6 @@
 ﻿using SampleApplication.Framework;
 
-namespace SampleApplication.Core.Domain.AddressBooks
+namespace SampleApplication.Core.Domain.AddressBooks.Entities
 {
     public class AddressBook : AggregateRoot<long>
     {

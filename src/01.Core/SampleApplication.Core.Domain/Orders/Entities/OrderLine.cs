@@ -1,4 +1,4 @@
-﻿namespace SampleApplication.Core.Domain.Orders
+﻿namespace SampleApplication.Core.Domain.Orders.Entities
 {
     public class OrderLine : Entity<long>
     {

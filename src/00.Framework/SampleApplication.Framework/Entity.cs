@@ -1,6 +1,4 @@
-﻿using SampleApplication.Framework;
-
-public abstract class Entity<TId> : IEquatable<Entity<TId>>
+﻿public abstract class Entity<TId> : IEquatable<Entity<TId>>
 {
     public TId Id { get; protected set; }
 

@@ -1,11 +1,6 @@
 ﻿using SampleApplication.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace SampleApplication.Core.Domain.Orders
+namespace SampleApplication.Core.Domain.Orders.Entities
 {
     public class Order : AggregateRoot<long>
     {
@@ -24,13 +19,13 @@ namespace SampleApplication.Core.Domain.Orders
         public DateTime OrderDate { get; set; }
         private readonly List<OrderLine> _orderLines = new();
         public IReadOnlyList<OrderLine> OrderLines => _orderLines;
-        public void SetCount(int newCount,long orderLineId)
+        public void SetCount(int newCount, long orderLineId)
         {
             if (newCount < 0)
                 throw new ArgumentException("orderLine Count cant be negetive");
 
             var orderLine = _orderLines.SingleOrDefault(x => x.Id == orderLineId);
-            if(orderLine == null)
+            if (orderLine == null)
                 throw new ArgumentException("orderLine not found");
 
             orderLine.SetCount(newCount);

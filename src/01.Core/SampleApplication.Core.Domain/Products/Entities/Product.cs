@@ -1,6 +1,6 @@
 ﻿using SampleApplication.Framework;
 
-namespace SampleApplication.Core.Domain.Products
+namespace SampleApplication.Core.Domain.Products.Entities
 {
     public class Product : AggregateRoot<long>
     {

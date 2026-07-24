@@ -1,16 +1,16 @@
-﻿namespace SampleApplication.Core.Domain.AddressBooks
+﻿namespace SampleApplication.Core.Domain.AddressBooks.Entities
 {
     public class AddressLine : Entity<long>
     {
         public long AddressBookId { get; set; }
         public string City { get; set; }
-        public string State { get; }
+        public string State { get; set; }
         public string Street { get; set; }
         public bool IsDefault { get; set; }
-        public string PostalCode { get; }
+        public string PostalCode { get; set; }
 
         public AddressLine(string street, string city, string state,
-                       string postalCode,bool isDefault)
+                       string postalCode, bool isDefault)
         {
             if (string.IsNullOrWhiteSpace(street))
                 throw new ArgumentException("Street is required", nameof(street));
