@@ -15,7 +15,7 @@ namespace SampleApplication.EndPoint.API.Controllers
             this.service = service;
         }
         [HttpPost]
-        public IActionResult AddPerson(CreateCustomerDto dto)
+        public IActionResult AddCustomer(CreateCustomerDto dto)
         {
             service.AddCustomer(dto);
             return Ok();

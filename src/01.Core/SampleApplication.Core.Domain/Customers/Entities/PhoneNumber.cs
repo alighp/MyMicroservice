@@ -6,7 +6,10 @@ namespace SampleApplication.Core.Domain.Customers.Entities
     {
         public string Number { get; }
         public PhoneNumberType Type { get; } // مثلاً: Mobile, Home, Work
+        private PhoneNumber()
+        {
 
+        }
         public PhoneNumber(string number, PhoneNumberType type = PhoneNumberType.Mobile)
         {
             if (string.IsNullOrWhiteSpace(number))

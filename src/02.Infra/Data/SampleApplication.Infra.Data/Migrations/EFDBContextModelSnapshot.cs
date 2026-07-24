@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using SampleApplication.Infra.Data.SQL;
 
 #nullable disable
 
@@ -21,7 +22,77 @@ namespace SampleApplication.Infra.Data.SQL.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("SampleApplication.Core.Domain.People.Customer", b =>
+            modelBuilder.Entity("SampleApplication.Core.Domain.AddressBooks.Entities.AddressBook", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<long>("CustomerId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("AddressBooks");
+                });
+
+            modelBuilder.Entity("SampleApplication.Core.Domain.AddressBooks.Entities.AddressLine", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<long>("AddressBookId")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("City")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDefault")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("PostalCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("State")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Street")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AddressBookId");
+
+                    b.ToTable("AddressLine");
+                });
+
+            modelBuilder.Entity("SampleApplication.Core.Domain.Categories.Category", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Categories");
+                });
+
+            modelBuilder.Entity("SampleApplication.Core.Domain.Customers.Entities.Customer", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
@@ -39,29 +110,100 @@ namespace SampleApplication.Infra.Data.SQL.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("People");
+                    b.ToTable("Customers");
                 });
 
-            modelBuilder.Entity("SampleApplication.Core.Domain.PhoneNumber", b =>
+            modelBuilder.Entity("SampleApplication.Core.Domain.Orders.Entities.Order", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<long?>("CustomerId")
                         .HasColumnType("bigint");
 
-                    b.Property<string>("Number")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<long>("AddressLineId")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime>("OrderDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<long>("OrderId")
+                        .HasColumnType("bigint");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CustomerId");
+                    b.ToTable("Orders");
+                });
 
-                    b.ToTable("PhoneNumber");
+            modelBuilder.Entity("SampleApplication.Core.Domain.Orders.Entities.OrderLine", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<int>("Count")
+                        .HasColumnType("int");
+
+                    b.Property<long?>("OrderId")
+                        .HasColumnType("bigint");
+
+                    b.Property<int>("Price")
+                        .HasColumnType("int");
+
+                    b.Property<long>("ProductId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("OrderId");
+
+                    b.ToTable("OrderLine");
+                });
+
+            modelBuilder.Entity("SampleApplication.Core.Domain.Products.Entities.Discount", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<int>("Amount")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Discount");
+                });
+
+            modelBuilder.Entity("SampleApplication.Core.Domain.Products.Entities.Product", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<long>("CategoryId")
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("DiscountId")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Price")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("DiscountId");
+
+                    b.ToTable("Products");
                 });
 
             modelBuilder.Entity("SampleApplication.Framework.OutBoxEventItem", b =>
@@ -114,16 +256,75 @@ namespace SampleApplication.Infra.Data.SQL.Migrations
                     b.ToTable("OutBoxEventItems");
                 });
 
-            modelBuilder.Entity("SampleApplication.Core.Domain.PhoneNumber", b =>
+            modelBuilder.Entity("SampleApplication.Core.Domain.AddressBooks.Entities.AddressLine", b =>
                 {
-                    b.HasOne("SampleApplication.Core.Domain.People.Customer", null)
-                        .WithMany("PhoneNumbers")
-                        .HasForeignKey("CustomerId");
+                    b.HasOne("SampleApplication.Core.Domain.AddressBooks.Entities.AddressBook", null)
+                        .WithMany("AddressLines")
+                        .HasForeignKey("AddressBookId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
-            modelBuilder.Entity("SampleApplication.Core.Domain.People.Customer", b =>
+            modelBuilder.Entity("SampleApplication.Core.Domain.Customers.Entities.Customer", b =>
                 {
+                    b.OwnsMany("SampleApplication.Core.Domain.Customers.Entities.PhoneNumber", "PhoneNumbers", b1 =>
+                        {
+                            b1.Property<long>("CustomerId")
+                                .HasColumnType("bigint");
+
+                            b1.Property<int>("Id")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("int");
+
+                            SqlServerPropertyBuilderExtensions.UseIdentityColumn(b1.Property<int>("Id"), 1L, 1);
+
+                            b1.Property<string>("Number")
+                                .IsRequired()
+                                .HasMaxLength(20)
+                                .HasColumnType("nvarchar(20)")
+                                .HasColumnName("PhoneNumber");
+
+                            b1.Property<int>("Type")
+                                .HasColumnType("int")
+                                .HasColumnName("PhoneType");
+
+                            b1.HasKey("CustomerId", "Id");
+
+                            b1.ToTable("CustomerPhoneNumbers", (string)null);
+
+                            b1.WithOwner()
+                                .HasForeignKey("CustomerId");
+                        });
+
                     b.Navigation("PhoneNumbers");
+                });
+
+            modelBuilder.Entity("SampleApplication.Core.Domain.Orders.Entities.OrderLine", b =>
+                {
+                    b.HasOne("SampleApplication.Core.Domain.Orders.Entities.Order", null)
+                        .WithMany("OrderLines")
+                        .HasForeignKey("OrderId");
+                });
+
+            modelBuilder.Entity("SampleApplication.Core.Domain.Products.Entities.Product", b =>
+                {
+                    b.HasOne("SampleApplication.Core.Domain.Products.Entities.Discount", "Discount")
+                        .WithMany()
+                        .HasForeignKey("DiscountId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Discount");
+                });
+
+            modelBuilder.Entity("SampleApplication.Core.Domain.AddressBooks.Entities.AddressBook", b =>
+                {
+                    b.Navigation("AddressLines");
+                });
+
+            modelBuilder.Entity("SampleApplication.Core.Domain.Orders.Entities.Order", b =>
+                {
+                    b.Navigation("OrderLines");
                 });
 #pragma warning restore 612, 618
         }

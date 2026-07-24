@@ -4,6 +4,10 @@ namespace SampleApplication.Core.Domain.Orders.Entities
 {
     public class Order : AggregateRoot<long>
     {
+        private Order()
+        {
+
+        }
         public Order(long addressLineId, DateTime orderDate, List<OrderLine> orderLines)
         {
             if (!orderLines.Any())
